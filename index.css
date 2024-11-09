@@ -121,6 +121,13 @@
  }
 
  @media (max-width: 768px) {
+   body{
+       display: flex !important;
+       justify-content: center !important;
+       align-items: center !important;
+       width: fit-content !important;
+       height: 100vh !important;
+   }
     .cd {
        width: 200px !important;
        height: 200px !important;
