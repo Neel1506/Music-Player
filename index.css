@@ -1,0 +1,140 @@
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(226, 226, 226, 0.873);
+
+ }
+
+ .cd {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 35px 0px;
+    box-shadow: 3px 3px 15px 10px rgba(112, 111, 111, 0.45);
+ }
+
+ .anime {
+    animation: rotatePlayer 3s linear infinite;
+ }
+
+ @keyframes rotatePlayer {
+    from {
+       transform: rotate(0deg);
+    }
+
+    to {
+       transform: rotate(360deg);
+    }
+ }
+
+ .cd img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    object-fit: cover;
+
+ }
+
+ .music-box {
+    border-radius: 38px;
+    background-color: rgb(248, 249, 249);
+    width: 125%;
+    height: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+ }
+
+ #title {
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+ }
+
+ #artist {
+    text-align: center;
+    margin-top: -10px;
+    font-family: monospace;
+ }
+
+ .music-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 30px;
+ }
+
+ .music-controls .fas {
+    color: #111111;
+    font-size: 1.5rem;
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+ }
+
+ .music-controls .main_button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+ }
+
+ .music-controls .fas:hover {
+    color: grey;
+ }
+
+ .music-controls .fa-play:hover {
+    background-color: grey;
+    color: black;
+ }
+
+ .progress-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+ }
+
+ .progress-bar {
+    width: 60%;
+    height: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ddd;
+ }
+
+ @media (max-width: 768px) {
+    .cd {
+       width: 200px !important;
+       height: 200px !important;
+    }
+    .music-controls {
+       width: 90%;
+       margin-top: 1rem;
+    }
+
+    .music-controls .main_button {
+       margin: 1rem 0;
+    }
+
+    .progress-container {
+       width: 90%;
+    }
+ }
