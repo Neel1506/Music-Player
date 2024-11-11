@@ -11,10 +11,9 @@
  }
 
  .cd {
-    width: 300px;
-    height: 300px;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
-    margin: 35px 0px;
     box-shadow: 3px 3px 15px 10px rgba(112, 111, 111, 0.45);
  }
 
@@ -42,28 +41,35 @@
  }
 
  .music-box {
-    border-radius: 38px;
+    border-radius: 22px;
     background-color: rgb(248, 249, 249);
-    width: 125%;
-    height: 125%;
+    width: fit-content;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    border: 2px solid gray;
+    padding: 1rem 2rem !important;
+    gap: 1.5rem;
  }
 
  #title {
     text-align: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    padding: 0;
+    margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;
  }
 
  #artist {
+   padding: 0;
+   margin: 0;
     text-align: center;
-    margin-top: -10px;
+    /* margin-top: -10px; */
     font-family: monospace;
+
  }
 
  .music-controls {
@@ -72,8 +78,8 @@
     align-items: center;
     width: 20rem;
     margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 30px;
+    /* margin-top: 5rem; */
+    /* margin-bottom: 30px; */
  }
 
  .music-controls .fas {
@@ -105,11 +111,11 @@
  }
 
  .progress-container {
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 1rem;
+    /* margin: 1rem; */
  }
 
  .progress-bar {
@@ -121,17 +127,25 @@
  }
 
  @media (max-width: 768px) {
-   body{
+    body {
        display: flex !important;
        justify-content: center !important;
        align-items: center !important;
        width: fit-content !important;
        height: 100vh !important;
-   }
+       width: 100vw !important;
+       /* margin-left: 2.2rem; */
+    }
+
+    .music-box {
+       box-shadow: 2px 2px 2px 2px #111111;
+    }
+
     .cd {
        width: 200px !important;
        height: 200px !important;
     }
+
     .music-controls {
        width: 90%;
        margin-top: 1rem;
